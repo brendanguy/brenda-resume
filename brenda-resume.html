@@ -21,13 +21,10 @@
     </nav>
     <section id="home">
     <h1>Brenda Nguy</h1>
-    <img src="Headshot.jpg" height="200px">
-    <h4>brenda-nguy@hotmail.com<br>
-    (801) 953-2586</h4>
-    <h2 class="headingstyle">Personal Bio</h2>
-    I enjoy outdoor activities such as hiking, riding bikes, longboarding etc.<br> 
-    My other hobbies include creativity like: drawing, building, and crafting.<br> 
-    I appreciate learning new skills and concepts.
+    <img src="Headshot.jpg" height="200px" alt="Avatar">
+        <p>I enjoy outdoor activities such as hiking, riding bikes, longboarding etc.<br>
+         My other hobbies include creativity like: drawing, building, and crafting.<br>
+         I appreciate learning new skills and concepts.</p>
     </section> 
 
     <section id="Education">
@@ -95,24 +92,29 @@
 
     <section id="References">
     <h2 class="headingstyle">References</h2>
-    <table>
+    <table class="table table-striped">
         <tr>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Email Address</th>
+            <thead>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email Address</th>
+            </thead>
         </tr>
         <tr>
-            <td>Peter Yin</td>
-            <td>801-651-3347</td>
-            <td>peter_yin@live.com</td>
+            <tbody>
+                <td>Peter Yin</td>
+                <td>801-651-3347</td>
+                <td>peter_yin@live.com</td>
         </tr>
         <tr>
-            <td>Anh Pham</td>
-            <td>801-512-6938</td>
+                <td>Anh Pham</td>
+                <td>801-512-6938</td>
+                <td></td>
+            </tbody>
         </tr>
     </table><br>
     </section>
-
+    <div class="container">
     <section id="Contact">
         <h4>Contact</h4>
         <form method="POST">
@@ -130,28 +132,84 @@
             </label><br><br>
             Reason For Contacting:<br>
             <label>
-                <input type="radio" name="ReasonForContacting" value="Reference">Reference
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Reference</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Testimonial</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">Request Service</label>
+                  </div>
             </label><br>
             <label>
-                <input type="radio" name="ReasonForContacting" value="Testimonial">Testimonial
-            </label><br>
-            <label>
-                <input type="radio" name="ReasonForContacting" value="RequestService">Request Service
-            </label><br>
-            <p>Comments:</p>
-            <label>
-                <textarea rows="5" cols="50"></textarea>
+                <textarea rows="5" cols="50" placeholder="Comments?"></textarea>
             </label><br>
             <input type="submit">
         </form>
-        </section><br>
+    </section>
     
-    <Footer>
+    <section id="my-info">
+        <h4>How to Reach Me</h4>
+        Email: brenda-nguy@hotmail.com
+        801-953-2586
+    </section>
+    </div>
+
+    <p id="my-paragraph"></p>
+
+    <footer class="clearfix">
         <a href="Resume.pdf" target="_blank">Resume</a>
-    </Footer>
+    </footer>
+
+    <div class="modal fade" id="greetUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="greetUserLabel">Hello World</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <label>Please enter your name</label>
+                <input type="text" id="greetingname">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="greetUser();">Sumbit</button>Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="getUserName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="greetUserLabel">Hello World</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>Hi <span> id="userName"</span>Hi (Name they Entered)! Thank you for reviewing my resume site.</p>
+                <input type="text" id="greetingname">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="js/myJavaScript.js"></script>
 </body>
 </html>
